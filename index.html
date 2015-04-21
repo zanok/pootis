@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+
+	  <style>
+		body {
+			background-image: url("http://i.ytimg.com/vi/ntz-qpsPuns/maxresdefault.jpg");
+			background-size: 100% 1000px;
+			background-repeat: no-repeat;
+		}
+	  </style>
+
+	<script> 
+
+		document.addEventListener("DOMContentLoaded", function(event) { 
+
+			count = 0
+
+
+			window.setInterval(function(){
+				count = count+1;
+
+				if(count%2==0){
+					document.title = "pootis";
+				}else{
+					document.title = "POOTIS";
+				}
+
+				if(count===95){
+					document.getElementById("pootis").innerHTML='';
+					count=0
+				}
+
+				var audio = new Audio("pootis.wav");
+
+				node = document.createElement("IMG");
+
+				node.src="http://i.ytimg.com/vi/ntz-qpsPuns/maxresdefault.jpg" ;
+				node.width="100";
+
+				audio.play()
+				document.getElementById("pootis").appendChild(node);
+
+			}, 500); 
+		});
+	</script>
+
+	  <style type="text/css">
+	  </style>
+	</head>
+
+	<body>
+		<div id="pootis">
+		</div>
+
+
+
+	</body>
+</html>
